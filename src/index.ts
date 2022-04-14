@@ -10,11 +10,6 @@ export class BowlingGame {
   }
 
   score() {
-    let score = 0;
-    this.rolls.forEach((roll) => {
-      score += roll;
-    });
-
-    return score;
+    return this.rolls.reduce((sum, roll) => sum + roll, 0);
   }
 }
